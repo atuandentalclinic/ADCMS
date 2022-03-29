@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/ic_baseline_date_range_24.xml" value="0.1285" />
+        <entry key="app/src/main/res/drawable/ic_baseline_login_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_calendar_today.xml" value="0.1285" />
+        <entry key="app/src/main/res/drawable/ic_home_work.xml" value="0.1285" />
+        <entry key="app/src/main/res/drawable/ic_monetization.xml" value="0.1285" />
+        <entry key="app/src/main/res/drawable/ic_supervised_user.xml" value="0.1285" />
+        <entry key="app/src/main/res/layout-v23/activity_registration.xml" value="0.11770833333333333" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_registration.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_registration2.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.11770833333333333" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/finance_fragment.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/finance_view_model_fragment.xml" value="0.11770833333333333" />
+        <entry key="app/src/main/res/layout/fragment_clinic.xml" value="0.11770833333333333" />
+        <entry key="app/src/main/res/layout/fragment_clinic_view_model.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/fragment_finance.xml" value="0.11770833333333333" />
+        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.11770833333333333" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_home2.xml" value="0.11770833333333333" />
+        <entry key="app/src/main/res/layout/fragment_item.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/fragment_item_list.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_setting_view_model.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.11770833333333333" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.11770833333333333" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/menu/main.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/menu/option_menu.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
