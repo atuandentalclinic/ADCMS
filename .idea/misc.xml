@@ -10,10 +10,11 @@
         <entry key="app/src/main/res/drawable/ic_monetization.xml" value="0.1285" />
         <entry key="app/src/main/res/drawable/ic_supervised_user.xml" value="0.1285" />
         <entry key="app/src/main/res/layout-v23/activity_registration.xml" value="0.11770833333333333" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.24074074074074073" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_registration.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_registration2.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_rv.xml" value="0.1015625" />
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.11770833333333333" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/finance_fragment.xml" value="0.25" />
@@ -29,6 +30,7 @@
         <entry key="app/src/main/res/layout/fragment_setting_view_model.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.11770833333333333" />
+        <entry key="app/src/main/res/layout/layout_item.xml" value="0.1015625" />
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.11770833333333333" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/menu/main.xml" value="0.3098958333333333" />

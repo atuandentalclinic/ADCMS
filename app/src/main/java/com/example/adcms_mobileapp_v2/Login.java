@@ -19,8 +19,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Login extends AppCompatActivity {
 
-    Button createAccountBtn, loginBtn;
-    EditText username,password;
+    Button createAccountBtn, loginBtn, addpatientBtn;
+    EditText username,password, usertype;
     FirebaseAuth firebaseAuth;
     FloatingActionButton fabDate;
     TextView tvDate;
@@ -34,7 +34,6 @@ public class Login extends AppCompatActivity {
         firebaseAuth = firebaseAuth.getInstance();
 
 
-
         createAccountBtn = findViewById(R.id.loginregisterbtn);
         createAccountBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,8 +42,18 @@ public class Login extends AppCompatActivity {
             }
         });
 
+        addpatientBtn = findViewById(R.id.addpatientbtn);
+        addpatientBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), PatientActivity.class));
+            }
+        });
+
+
         username = findViewById(R.id.loginEmail);
         password = findViewById(R.id.loginPassword);
+        usertype = findViewById(R.id.usertype);
         loginBtn = findViewById(R.id.loginBtn);
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
@@ -71,8 +80,10 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onSuccess(AuthResult authResult) {
                         //Login Successful
+
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         finish();
+
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override

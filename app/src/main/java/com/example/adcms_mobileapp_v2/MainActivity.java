@@ -69,8 +69,19 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(),Login.class));
             finish();
         }
+
+        if (item.getItemId()== R.id.nav_patient){
+
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(getApplicationContext(),PatientActivity.class));
+
+            //finish();
+        }
+
         return super.onOptionsItemSelected(item);
     }
+
+
 
     @Override
     public boolean onSupportNavigateUp() {

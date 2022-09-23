@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ADCMS_MobileApp_V2">
         <activity
+            android:name=".RVActivity"
+            android:exported="false" />
+        <activity
             android:name=".Registration"
+            android:exported="false" />
+        <activity
+            android:name=".PatientActivity"
             android:exported="false" />
         <activity
             android:name=".Login"
@@ -25,7 +31,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.ADCMS_MobileApp_V2.NoActionBar"></activity>
+            android:theme="@style/Theme.ADCMS_MobileApp_V2.NoActionBar" />
 
         <meta-data
             android:name="preloaded_fonts"
