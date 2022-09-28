@@ -1,11 +1,14 @@
 package com.example.adcms_mobileapp_v2;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -13,11 +16,14 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -28,6 +34,7 @@ public class Registration extends AppCompatActivity {
             registerConfirmation, registerAddress, registerMobile;
     Button registerBtn, registerLoginBtn;
     FirebaseAuth fAuth;
+    FirebaseUser user;
 
     FloatingActionButton fabDate;
     EditText tvDate;
@@ -67,6 +74,8 @@ public class Registration extends AppCompatActivity {
             public void onClick(View view) {
                 //Extract Data from the Form
 
+
+
                 String FirstName = registerFirstname.getText().toString();
                 String Lastname = registerLastName.getText().toString();
                 String Email = registerEmailAddress.getText().toString();
@@ -74,6 +83,8 @@ public class Registration extends AppCompatActivity {
                 String ConfirmPW = registerConfirmation.getText().toString();
                 String Address = registerAddress.getText().toString();
                 String Mobile = registerMobile.getText().toString();
+
+
 
                 if (FirstName.isEmpty()) {
                     registerFirstname.setError("First Name is required");
@@ -129,26 +140,44 @@ public class Registration extends AppCompatActivity {
                     registerMobile.setError("Mobile Number is required");
                     registerMobile.requestFocus();
                     return;
+
                 }
+
+
+
+
 
                 //Validated Data
                 //Register user using firebase
+
+
 
                 Toast.makeText(Registration.this, "All information are valid", Toast.LENGTH_SHORT).show();
                 fAuth.createUserWithEmailAndPassword(Email, Password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
                     public void onSuccess(AuthResult authResult) {
                         //Send User to Next Page
-                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                        finish();
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(Registration.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                       // startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                       // finish();
+
+                        fAuth.getCurrentUser().sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()){
+
+                                    Toast.makeText(Registration.this, "Registered Succesfully Please Verify Email", Toast.LENGTH_SHORT).show();
+                                }else {
+                                    Toast.makeText(Registration.this, task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                                }
+
+                            }
+                        });
                     }
                 });
+
+
             }
+
         });
 
         fabDate.setOnClickListener(new View.OnClickListener() {
